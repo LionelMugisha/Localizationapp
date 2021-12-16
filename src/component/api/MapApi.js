@@ -10,7 +10,7 @@ export const getRestaurantData = async (sw, ne) => {
               tr_latitude: ne.lat,
               bl_longitude: sw.lng,
               tr_longitude: ne.lng,
-              limit: '30',
+              limit: '20',
             },
             headers: {
               'x-rapidapi-host': 'travel-advisor.p.rapidapi.com',
