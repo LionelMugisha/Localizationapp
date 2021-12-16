@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import List from './List'
 import Map from './Map'
 import { CssBaseline, Grid } from '@material-ui/core'
 import { getRestaurantData } from './api/MapApi'
@@ -9,7 +8,6 @@ const Dashboard = () => {
     const [place, setPlace] = useState([]);
     const [coordinate, setCoordinate] = useState({});
     const [bound, setBound] = useState({});
-    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(({coords:{latitude, longitude}}) => {
@@ -19,11 +17,9 @@ const Dashboard = () => {
 
     useEffect(() => {
         if(bound.sw && bound.ne){
-            setIsLoading(true);
             getRestaurantData(bound.sw, bound.ne)
                 .then((data) => {
                     setPlace(data?.filter((places) => places.name && places.num_reviews > 0 ));
-                    setIsLoading(false);
                 })
         }
     },[bound]);
