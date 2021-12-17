@@ -34,9 +34,6 @@ const Navbar = () => {
                             <ul className="toggle">
                                 <li><Link to="/register">Register</Link></li>
                                 <li><Link to="/">Login</Link></li>
-                                <li className="close">
-                                    <img src={Close} alt="" width="20" />
-                                </li>
                             </ul>
                         </nav>
                     </>
@@ -46,9 +43,6 @@ const Navbar = () => {
                         <nav>
                             <ul className="toggle">
                                 <li><Link to="/dashboard">Dashboard</Link></li>
-                                <li className="close">
-                                    <img src={Close} alt="" width="20" />
-                                </li>
                             </ul>
                             <div className="nav-cart" onClick={handleLogout}>
                                 LOGOUT
