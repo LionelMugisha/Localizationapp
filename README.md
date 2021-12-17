@@ -4,6 +4,9 @@
 #Time required to complete the challenge
 It took me 2days to complete the task
 
+#Deployment site
+https://localozation-react-app.netlify.app
+
 #To run the project
 1. Download the project
 2. enter in the folder and then type 'npm install' to install dependencies
